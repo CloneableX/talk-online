@@ -4,6 +4,6 @@ class MessagesChannel < ApplicationCable::Channel
   end
 
   def receive(data)
-    ActionCable.server.broadcast('messages', message_text: data[:message_text])
+    ActionCable.server.broadcast('messages', message_text: data['message_text'])
   end
 end
