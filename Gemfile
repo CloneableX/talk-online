@@ -17,6 +17,8 @@ gem "tailwindcss-rails", "~> 2.0"
 gem 'jbuilder', '~> 2.7'
 # Use JQuery in Rails
 gem "jquery-rails", "~> 4.5"
+# Use Webpacker manage application-like JavaScript
+gem "webpacker", "~> 5.4"
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -57,3 +59,4 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
