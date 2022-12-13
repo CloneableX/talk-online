@@ -33,6 +33,9 @@ jobs:
         uses: ruby/setup-ruby@0a29871fe2b0200a17a4497bae54fe5df0d973aa # v1.115.3
         with:
           bundler-cache: true
+      # Webpacker compile
+      - name: Setup Rails Webpacker
+        run: bin/rails webpacker:install
       # Add or replace database setup steps here
       - name: Set up database schema
         run: bin/rails db:schema:load
