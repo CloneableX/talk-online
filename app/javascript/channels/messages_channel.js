@@ -10,7 +10,7 @@ consumer.subscriptions.create("MessagesChannel", {
   },
 
   received(data) {
-    $('.message-container').append(`<li>${data.message_text}</li>`)
+    $('.message-container').append(data.html)
   },
 
   sendMessage() {
