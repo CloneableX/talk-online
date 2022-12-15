@@ -1,4 +1,4 @@
 import $ from "jquery";
 
 global.$ = $
-global.jquery = $
+global.jQuery = $
