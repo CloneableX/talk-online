@@ -5,6 +5,7 @@
     "@types/jest": "^29.2.4",
     "babel-jest": "^29.3.1",
     "jest": "^29.3.1",
+    "jest-environment-jsdom": "^29.3.1",
     "jsdom": "^20.0.3",
     "webpack-dev-server": "^3"
   },
@@ -19,6 +20,10 @@
     "webpack-cli": "^3.3.12"
   },
   "jest": {
+    "testEnvironment": "jsdom",
+    "roots": ["spec/javascript"],
+    "setupFiles": ["<rootDir>/spec/javascript/jest.env-setup.js"],
+    "setupFilesAfterEnv": ["<rootDir>/spec/javascript/jest.suite-setup.js"],
     "testPathIgnorePatterns": [
       "node_modules/",
       "config/webpack/test.js",

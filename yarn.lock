@@ -1394,6 +1394,15 @@
     expect "^29.0.0"
     pretty-format "^29.0.0"
 
+"@types/jsdom@^20.0.0":
+  version "20.0.1"
+  resolved "https://registry.yarnpkg.com/@types/jsdom/-/jsdom-20.0.1.tgz#07c14bc19bd2f918c1929541cdaacae894744808"
+  integrity sha512-d0r18sZPmMQr1eG35u12FZfhIXNrnsPU/g5wvRKCUf/tOGilKKwYMYGqh33BNR6ba+2gkHw1EUiHoN3mn7E5IQ==
+  dependencies:
+    "@types/node" "*"
+    "@types/tough-cookie" "*"
+    parse5 "^7.0.0"
+
 "@types/json-schema@^7.0.5", "@types/json-schema@^7.0.8":
   version "7.0.11"
   resolved "https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.11.tgz"
@@ -1428,6 +1437,11 @@
   version "2.0.1"
   resolved "https://registry.npmjs.org/@types/stack-utils/-/stack-utils-2.0.1.tgz"
   integrity sha512-Hl219/BT5fLAaz6NDkSuhzasy49dwQS/DSdu4MdggFB8zcXv7vflBI3xp7FEmkmdDkBUI2bPUNeMttp2knYdxw==
+
+"@types/tough-cookie@*":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@types/tough-cookie/-/tough-cookie-4.0.2.tgz#6286b4c7228d58ab7866d19716f3696e03a09397"
+  integrity sha512-Q5vtl1W5ue16D+nIaW8JWebSSraJVlK+EthKn7e7UcD4KWsaSJ8BqGPXNaPghgtcn/fhvrN17Tv8ksUsQpiplw==
 
 "@types/yargs-parser@*":
   version "21.0.0"
@@ -4854,6 +4868,20 @@ jest-each@^29.3.1:
     jest-util "^29.3.1"
     pretty-format "^29.3.1"
 
+jest-environment-jsdom@^29.3.1:
+  version "29.3.1"
+  resolved "https://registry.yarnpkg.com/jest-environment-jsdom/-/jest-environment-jsdom-29.3.1.tgz#14ca63c3e0ef5c63c5bcb46033e50bc649e3b639"
+  integrity sha512-G46nKgiez2Gy4zvYNhayfMEAFlVHhWfncqvqS6yCd0i+a4NsSUD2WtrKSaYQrYiLQaupHXxCRi8xxVL2M9PbhA==
+  dependencies:
+    "@jest/environment" "^29.3.1"
+    "@jest/fake-timers" "^29.3.1"
+    "@jest/types" "^29.3.1"
+    "@types/jsdom" "^20.0.0"
+    "@types/node" "*"
+    jest-mock "^29.3.1"
+    jest-util "^29.3.1"
+    jsdom "^20.0.0"
+
 jest-environment-node@^29.3.1:
   version "29.3.1"
   resolved "https://registry.npmjs.org/jest-environment-node/-/jest-environment-node-29.3.1.tgz"
@@ -5135,7 +5163,7 @@ js-yaml@^3.13.1, js-yaml@^3.14.1:
     argparse "^1.0.7"
     esprima "^4.0.0"
 
-jsdom@^20.0.3:
+jsdom@^20.0.0, jsdom@^20.0.3:
   version "20.0.3"
   resolved "https://registry.yarnpkg.com/jsdom/-/jsdom-20.0.3.tgz#886a41ba1d4726f67a8858028c99489fed6ad4db"
   integrity sha512-SYhBvTh89tTfCD/CRdSOm13mOBa42iTaTyfyEWBdKcGdPxPtLFBXuHR8XHb33YNYaP+lLbmSvBTsnoesCNJEsQ==
@@ -6062,7 +6090,7 @@ parse-passwd@^1.0.0:
   resolved "https://registry.npmjs.org/parse-passwd/-/parse-passwd-1.0.0.tgz"
   integrity sha512-1Y1A//QUXEZK7YKz+rD9WydcE1+EuPr6ZBgKecAB8tmoW6UFv0NREVJe1p+jRxtThkcbbKkfwIbWJe/IeE6m2Q==
 
-parse5@^7.1.1:
+parse5@^7.0.0, parse5@^7.1.1:
   version "7.1.2"
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-7.1.2.tgz#0736bebbfd77793823240a23b7fc5e010b7f8e32"
   integrity sha512-Czj1WaSVpaoj0wbhMzLmWD69anp2WH7FXMB9n1Sy8/ZFF9jolSQVMu1Ij5WIyGmcBmhk7EOndpO4mIpihVqAXw==

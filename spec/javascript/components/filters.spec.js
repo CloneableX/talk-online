@@ -1,5 +1,5 @@
-import {mockDom} from "./jest.mock";
-import {pageFilter} from "../../app/javascript/components/filters";
+import {mockDom} from "./mocks";
+import {pageFilter} from "../../../app/javascript/components/filters";
 
 describe('filters', () => {
   test('should call function when page is correspond with that given', () => {
@@ -14,8 +14,6 @@ describe('filters', () => {
   })
 
   test('should reject to call function when page is different with that given', () => {
-    mockDom('<p>Hello world</p>')
-
     let result = 0
     pageFilter('rooms-show-page', () => { result = 2 })
     expect(result).toEqual(0)
