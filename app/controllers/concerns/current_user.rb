@@ -4,9 +4,8 @@ module CurrentUser
   private
 
   def set_current_user
-    pp session[:user_id]
     User.find(session[:user_id])
   rescue ActiveRecord::RecordNotFound
-    session[:user_id] = User.create.id
+    session[:user_id] = User.create(name: 'Hank').id
   end
 end
