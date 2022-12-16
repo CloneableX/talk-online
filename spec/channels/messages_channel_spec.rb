@@ -6,6 +6,9 @@ RSpec.describe MessagesChannel, type: :channel do
   let(:current_user) { create(:user) }
   let(:message) { build(:message, content: message_text, sender: current_user) }
 
+  before { travel_to Time.local(1994) }
+  after { travel_back }
+
   it 'should send message text' do
     stub_connection current_user: current_user
     subscribe room_number: room_number
