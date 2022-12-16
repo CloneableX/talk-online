@@ -5,7 +5,7 @@ class MessagesChannel < ApplicationCable::Channel
   end
 
   def receive(data)
-    message = Message.new(data['message_text'])
+    message = Message.new(data['message_text'], current_user)
     message_html = ApplicationController.render(partial: 'messages/message', locals: { message: message })
     ActionCable.server.broadcast(broadcast_name, html: message_html)
   end

@@ -2,6 +2,10 @@
 
 FactoryBot.define do
   factory :message do
-    initialize_with { new(content) }
+    transient do
+      sender { create(:user) }
+    end
+
+    initialize_with { new(content, sender) }
   end
 end
