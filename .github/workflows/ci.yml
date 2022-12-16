@@ -34,11 +34,22 @@ jobs:
         with:
           bundler-cache: true
       # Webpacker compile
-      - name: Setup Rails Webpacker
+      - name: Set up Rails Webpacker
         run: bin/rails webpacker:install
       # Add or replace database setup steps here
       - name: Set up database schema
         run: bin/rails db:schema:load
       # Add or replace test runners here
-      - name: Run tests
+      - name: Run ruby tests
         run: bin/rake
+        
+      # JavaScript test
+      - name: Set up node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: 'npm'
+      - name: Yarn install packages
+        run: yarn install
+      - name: Run JavaScript test
+        run: yarn jest
