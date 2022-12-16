@@ -1,3 +1,5 @@
 class RoomsController < ApplicationController
-  def show; end
+  def show
+    @number = params[:number]
+  end
 end

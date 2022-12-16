@@ -1,8 +1,8 @@
 import consumer from "./consumer"
 
 const messagesChannel = {
-  create: (receivedFun) => {
-    return consumer.subscriptions.create("MessagesChannel", {
+  create: (roomNumber, receivedFun) => {
+    return consumer.subscriptions.create({channel: "MessagesChannel", room_number: roomNumber}, {
       initialized() {
         this.sendMessage = this.sendMessage.bind(this)
       },

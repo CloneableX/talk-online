@@ -1,13 +1,13 @@
 import messagesChannel from "../../../channels/messages_channel";
 
 class MessagePanel {
-  constructor() {
-    this.channel = messagesChannel.create(this.displayMessage)
+  constructor(roomNumber) {
+    this.channel = messagesChannel.create(roomNumber, this.displayMessage)
     this.installListener()
   }
 
-  static setup() {
-    new MessagePanel()
+  static setup(roomNumber) {
+    new MessagePanel(roomNumber)
   }
 
   installListener() {
