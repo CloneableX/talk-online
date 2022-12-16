@@ -8,6 +8,13 @@ Bundler.require(*Rails.groups)
 
 module TalkOnline
   class Application < Rails::Application
+    # Configuration for rails generator
+    config.generators do |g|
+      g.test_framework fixtures: false,
+                       view_specs: false,
+                       routing_specs: false
+      g.factory_bot false
+    end
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
     # Cancel css compressor
