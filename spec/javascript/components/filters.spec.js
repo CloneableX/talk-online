@@ -1,4 +1,4 @@
-import {mockDom} from "./mocks";
+import {mockDom} from "../mocks";
 import {pageFilter} from "../../../app/javascript/components/filters";
 
 describe('filters', () => {
