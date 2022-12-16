@@ -1,16 +1,16 @@
 require 'rails_helper'
 
 RSpec.describe MessagesChannel, type: :channel do
-  # send message about content, sender and send datetime
-  #   render by a message object
-  #   sender of message is current user
-  #     record current user into session
-  #       model User name:string
-  #       record current user into session when user exists
-  #       record a new user when user doesn't exists
-  #     get current user when it needs in channel
-  #       use controller concern that sets current user into session
-  #       include in ApplicationCable::Channel
+  # TODO: send message about content, sender and send datetime
+  #   TODO: render by a message object
+  #   TODO: sender of message is current user
+  #     TODO: record current user into session
+  #       HINT: model User name:string
+  #       TODO: record current user into session when user exists
+  #       TODO: record a new user when user doesn't exists
+  #     TODO: get current user when it needs in channel
+  #       TODO: use controller concern that sets current user into session
+  #       TODO: include in ApplicationCable::Channel
   let(:room_number) { 'AAAA' }
 
   it 'should send message text' do
