@@ -15,10 +15,6 @@ RSpec.describe MessagesChannel, type: :channel do
     end.to have_broadcasted_to("room_#{room_number}::messages").with(html: message_html)
   end
   #   TODO: sender of message is current user
-  #     TODO: record current user into session
-  #       HINT: model User name:string
-  #       TODO: record current user into session when user exists
-  #       TODO: record a new user when user doesn't exists
   #     TODO: get current user when it needs in channel
   #       TODO: use controller concern that sets current user into session
   #       TODO: include in ApplicationCable::Channel
