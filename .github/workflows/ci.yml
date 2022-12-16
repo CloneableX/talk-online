@@ -52,4 +52,4 @@ jobs:
       - name: Yarn install packages
         run: yarn install
       - name: Run JavaScript test
-        run: yarn jest
+        run: yarn test
