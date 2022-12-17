@@ -1,6 +1,12 @@
-<%= form_with url: rooms_path do |f| %>
+<%= form_with url: sessions_path, class: 'w-full max-w-sm mx-auto' do |f| %>
+  <div class="flex items-center border-b border-teal-500 py-2">
+    <%= f.text_field :room_number, placeholder: 'Room Number', class: "appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:border-none focus:ring-0" %>
+    <%= f.submit 'Join Room', class: "flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" %>
+  </div>
+<% end %>
+<%= form_with url: rooms_path, class: 'w-full max-w-sm mx-auto my-8' do |f| %>
   <p>
-    Please
+    Or you can
     <%= f.submit 'Create Room', class: 'text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800' %>
     and join it.
   </p>
