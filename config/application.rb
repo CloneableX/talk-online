@@ -10,10 +10,13 @@ module TalkOnline
   class Application < Rails::Application
     # Configuration for rails generator
     config.generators do |g|
-      g.test_framework fixtures: false,
+      g.test_framework :rspec,
+                       fixtures: false,
                        view_specs: false,
-                       routing_specs: false
+                       routing_specs: false,
+                       helper_specs: false
       g.factory_bot false
+      g.helper = false
     end
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
