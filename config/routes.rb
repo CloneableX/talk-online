@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   root 'welcome#index'
 
-  resources :rooms, only: [:create]
+  resources :rooms, only: [:create] do
+    get 'number', to: 'room_numbers#show', as: :number
+  end
   get 'rooms/:number', to: 'rooms#show', as: :room
-
-  get 'room_numbers/:room_id', to: 'room_numbers#show', as: :room_number
 end

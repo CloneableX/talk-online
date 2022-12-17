@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "Rooms", type: :request do
-  describe "GET /:number" do
+  describe "GET :number" do
     it 'should show room' do
       get room_path('AAAA')
       expect(response).to be_successful
@@ -12,7 +12,7 @@ RSpec.describe "Rooms", type: :request do
     it 'should create a new room' do
       post rooms_path
 
-      expect(response).to redirect_to(room_number_url)
+      expect(response).to be_redirect
     end
   end
 
