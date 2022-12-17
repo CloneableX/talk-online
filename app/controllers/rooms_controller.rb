@@ -7,6 +7,7 @@ class RoomsController < ApplicationController
 
   def create
     room = Room.create
+    flash[:alert] = 'Create room successfully! Please copy it.'
     redirect_to room_number_url(room)
   end
 
