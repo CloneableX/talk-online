@@ -15,7 +15,4 @@ RSpec.describe Room, type: :model do
       expect { Room.create! }.to raise_error ActiveRecord::RecordInvalid
     end
   end
-  #     TODO: join room by input room number
-  #       TODO: redirect back to root page when room number is incorrect
-  #       TODO: join room when room number is correct
 end

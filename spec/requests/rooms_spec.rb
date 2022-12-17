@@ -17,8 +17,15 @@ RSpec.describe "Rooms", type: :request do
 
   describe "GET :number" do
     it 'should show room' do
-      get room_path('AAAA')
+      get room_path(create(:room).number)
       expect(response).to be_successful
+    end
+  end
+
+  describe "#check_number" do
+    it 'should redirect to root page when room number is incorrect' do
+      get room_path('AAAA')
+      expect(response).to redirect_to(root_path)
     end
   end
 
