@@ -8,6 +8,14 @@ RSpec.describe "Rooms", type: :request do
     end
   end
 
+  describe "POST /" do
+    it 'should create a new room' do
+      post rooms_path
+
+      expect(response).to redirect_to(room_number_url)
+    end
+  end
+
   describe '#set_current_user' do
     let(:room_number) { 'AAAA' }
 
