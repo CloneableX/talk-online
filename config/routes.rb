@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  root 'welcome#index'
+  root 'rooms#new'
 
-  resources :rooms, only: [:create] do
+  resources :rooms, only: [:new, :create] do
     get 'number', to: 'room_numbers#show', as: :number
   end
   get 'rooms/:number', to: 'rooms#show', as: :room

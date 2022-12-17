@@ -3,12 +3,14 @@ class RoomsController < ApplicationController
 
   before_action :set_current_user
 
-  def show
-    @number = params[:number]
-  end
+  def new; end
 
   def create
     room = Room.create(number: 'AAAA')
     redirect_to room_number_url(room)
+  end
+
+  def show
+    @number = params[:number]
   end
 end
