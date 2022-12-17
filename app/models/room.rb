@@ -1,5 +1,5 @@
 class Room < ApplicationRecord
-  after_initialize :generate_number
+  after_initialize :generate_number, if: -> { number.blank? }
 
   validates :number, uniqueness: true
 
