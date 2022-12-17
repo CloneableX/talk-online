@@ -18,6 +18,9 @@ class RoomsController < ApplicationController
 
   def check_number
     room = Room.find_by(number: params[:number])
-    redirect_to root_url if room.blank?
+    if  room.blank?
+      flash[:error] = 'Room number is not exists! Please input again.'
+      redirect_to root_url if room.blank?
+    end
   end
 end
