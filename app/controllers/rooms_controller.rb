@@ -6,7 +6,7 @@ class RoomsController < ApplicationController
   def new; end
 
   def create
-    room = Room.create(number: 'AAAA')
+    room = Room.create
     redirect_to room_number_url(room)
   end
 
